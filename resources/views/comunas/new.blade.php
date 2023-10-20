@@ -29,7 +29,6 @@
               name="name" placeholder="Comuna name">
             </div>
 
-        <div class="mb-3">
             <label for="municipality">Municipality</label>
             <select class="frome.select" id="municipality" name="code" required>
                 <option selected disabled value="">choose one ...</option>
@@ -37,7 +36,6 @@
                     <option value="{{$municipio->muni_codi}}">{{$municipio->muni_nomb}}</option>
                 @endforeach
             </select>
-        </div>
 
             <div class="mb-3">
               <label for="depa_codi">Departamento:</label>
@@ -49,6 +47,15 @@
               </select>
           </div>
 
+          <div class="mb-3">
+              <label for="pais_codi">País:</label>
+              <select class="form-select" id="pais_codi" name="pais_codi" required>
+                  <option selected disabled value="">Escoge...</option>
+                  @foreach ($paises as $pais)
+                      <option value="{{ $pais->pais_codi }}">{{ $pais->pais_nomb }}</option>
+                  @endforeach
+              </select>
+          </div>
 
             <div class="mb-3">
                 <button type="submit" class="btn btn-primary">Save</button>
