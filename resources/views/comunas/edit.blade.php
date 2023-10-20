@@ -43,8 +43,7 @@
 
                         @endif
                 @endforeach
-            </select>
-            </div>
+             </select>
 
             <div class="mb-3">
               <label for="depa_codi" class="form-label">Departamento</label>
@@ -68,7 +67,7 @@
                         {{ $pais->pais_nomb }}
                     </option>
                 @endforeach
-                  </select>
+            </select>
         </div>>
 
 
