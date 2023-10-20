@@ -30,6 +30,7 @@
               name="name" value="{{ $comuna->comu_nomb}}">
             </div>
 
+            <div class="mb-3">
             <label for="municipality">Municipality</label>
             <select class="frome.select" id="municipality" name="code" required>
                 <option selected disabled value="">choose one ...</option>
@@ -43,6 +44,7 @@
                         @endif
                 @endforeach
             </select>
+            </div>
 
             <div class="mb-3">
               <label for="depa_codi" class="form-label">Departamento</label>
