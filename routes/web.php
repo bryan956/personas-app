@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\comunaController;
+use app\Http\Controllers\PaisController;
+use App\Models\Pais;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +20,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/comunas', [ComunaController::class, 'index']);
+route('Comunas.create');
+
