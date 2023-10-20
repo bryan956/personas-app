@@ -20,6 +20,7 @@ class ComunaController extends Controller
         //$comunas = Comuna::all();
         $comunas = DB::table('tb_comuna')
             ->join('tb_municipio', 'tb_comuna.muni_codi', '=', 'tb_municipio.muni_codi')
+            ->join('tb_departamento', 'tb_municipio.depa_codi', '=', 'tb_departamento.depa_codi')
             ->select('tb_comuna.*', 'tb_municipio.muni_nomb')
             ->get();
         return view("comunas.index", ["comunas" => $comunas]);
@@ -41,7 +42,6 @@ class ComunaController extends Controller
             'departamentos' => $departamentos,
             'paises' => $paises,
         ]);
-
     }
 
     /**
@@ -69,6 +69,7 @@ class ComunaController extends Controller
 
         return view('comunas.index', ['comunas' => $comunas, 'municipios' => $municipios]);
     }
+    
 
     /**
      * Display the specified resource.
@@ -98,7 +99,7 @@ class ComunaController extends Controller
         'comuna' => $comuna,
         'municipios' => $municipios,
         'departamentos' => $departamentos,
-        'paises' => $paises, 
+        'paises' => $paises, // Pasar los países a la vista
     ]);
     }
 

@@ -68,7 +68,7 @@
                         {{ $pais->pais_nomb }}
                     </option>
                 @endforeach
-            </select>
+                  </select>
         </div>>
 
 
