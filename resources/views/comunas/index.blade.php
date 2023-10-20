@@ -35,7 +35,7 @@
                         <td>{{$comuna->muni_nomb}}</td>
                         <td>
 
-                            <form action="{{ route('comunas.destroy', ['comuna'=> $comuna->comu_codi]) }}"
+                        <form action="{{ route('comunas.destroy', ['comuna'=> $comuna->comu_codi]) }}"
                                 method='POST' style="display: inline-block">
                                 @method('delete')
                                 @csrf
